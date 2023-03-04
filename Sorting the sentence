@@ -1,0 +1,18 @@
+class Solution:
+    def sortSentence(self, s: str) -> str:  
+        splitted_array = s.split()
+        #we splitted our string input, into splitted array wedemibal keyernew
+        answer =[None]*len(splitted_array)
+        
+        for i in range(len(splitted_array)):
+            k=int(splitted_array[i][-1])
+            answer[k-1]=splitted_array[i][:-1]
+
+#******************************************************************#
+        real=''
+        for i in answer:
+            real = real+" "+i
+        # absolute = real[1:-1] + real[-1]
+        absolute = real[1:]
+
+        return absolute
